@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>Alerts</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>79f5338d-9593-4a15-9bd4-e2111cdce8b2</ProjectGuid>
+  <FullPath>C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Alerts\Alerts.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\.sonarqube\conf\5\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Alerts\bin\Debug\netcoreapp2.1\Alerts.dll.RoslynCA.json|C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Alerts\bin\Debug\netcoreapp2.1\Alerts.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\.sonarqube\out\5</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>netcoreapp2.1</TargetFramework>
+</ProjectInfo>

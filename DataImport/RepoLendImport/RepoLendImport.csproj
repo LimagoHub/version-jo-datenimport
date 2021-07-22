@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>BBk.Rc1.Ricis.DataImport.RepoLendImport</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Alerts\Alerts.csproj" />
+    <ProjectReference Include="..\BatchProcessing\BatchProcessing.csproj" />
+    <ProjectReference Include="..\Configurations\Configurations.csproj" />
+    <ProjectReference Include="..\CrudRepository\CrudRepository.csproj" />
+    <ProjectReference Include="..\Database\Database.csproj" />
+    <ProjectReference Include="..\DocumentsDatabase\DocumentsDatabase.csproj" />
+    <ProjectReference Include="..\Dtos\Dtos.csproj" />
+    <ProjectReference Include="..\GenericBusinessLogic\GenericBusinessLogic.csproj" />
+    <ProjectReference Include="..\GenericReadersAndWriters\GenericReadersAndWriters.csproj" />
+    <ProjectReference Include="..\InterestCalculation\InterestCalculation.csproj" />
+  </ItemGroup>
+
+</Project>

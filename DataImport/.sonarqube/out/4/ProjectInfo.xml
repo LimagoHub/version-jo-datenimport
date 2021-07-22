@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>Dtos</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>b6353978-529f-44d0-b8d4-df522d9f281f</ProjectGuid>
+  <FullPath>C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Dtos\Dtos.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\.sonarqube\conf\4\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Dtos\bin\Debug\netcoreapp2.1\Dtos.dll.RoslynCA.json|C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Dtos\bin\Debug\netcoreapp2.1\Dtos.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\.sonarqube\out\4</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>netcoreapp2.1</TargetFramework>
+</ProjectInfo>

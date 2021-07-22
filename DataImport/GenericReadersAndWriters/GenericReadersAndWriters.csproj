@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <RootNamespace>BBk.Rc1.Ricis.SharedLibraries.GenericReadersAndWriters</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BatchProcessing\BatchProcessing.csproj" />
+    <ProjectReference Include="..\CrudRepository\CrudRepository.csproj" />
+  </ItemGroup>
+
+</Project>

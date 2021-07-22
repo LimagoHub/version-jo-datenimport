@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>GenericBusinessLogic</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>7c8f1a02-e9bd-4c73-b40d-b386cf9a801c</ProjectGuid>
+  <FullPath>C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\GenericBusinessLogic\GenericBusinessLogic.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\.sonarqube\conf\9\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\GenericBusinessLogic\bin\Debug\netcoreapp2.1\GenericBusinessLogic.dll.RoslynCA.json|C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\GenericBusinessLogic\bin\Debug\netcoreapp2.1\GenericBusinessLogic.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\.sonarqube\out\9</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>netcoreapp2.1</TargetFramework>
+</ProjectInfo>

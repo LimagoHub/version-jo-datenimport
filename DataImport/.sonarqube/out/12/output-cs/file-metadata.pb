@@ -1,0 +1,10 @@
+ô
+èC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\GenericReadersAndWritersTests\File\Csv\AbstractCsvFileReaderTests.csutf-8¥
+™C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\GenericReadersAndWritersTests\File\Csv\LineTokenizer\DefaultCommaSeparatedLineTokenizerTests.csutf-8ô
+èC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\GenericReadersAndWritersTests\File\Csv\LineTokenizer\FileSetTests.csutf-8∑
+≠C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\GenericReadersAndWritersTests\File\Csv\SupportingClasses\AbstractCsvFileReaderNamedDummyForTest.csutf-8∫
+∞C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\GenericReadersAndWritersTests\File\Csv\SupportingClasses\AbstractCsvFileReaderPositionDummyForTest.csutf-8ö
+êC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\GenericReadersAndWritersTests\File\Csv\SupportingClasses\DummyPoco.csutf-8ª
+ØC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\GenericReadersAndWritersTests\obj\Debug\netcoreapp2.1\.NETCoreApp,Version=v2.1.AssemblyAttributes.csutf-8∫
+ÆC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\GenericReadersAndWritersTests\obj\Debug\netcoreapp2.1\GenericReadersAndWritersTests.AssemblyInfo.csutf-8∂
+©C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\GenericReadersAndWritersTests\obj\Debug\netcoreapp2.1\GenericReadersAndWritersTests.Program.csutf-16

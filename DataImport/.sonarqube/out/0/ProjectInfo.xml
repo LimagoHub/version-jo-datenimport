@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ProjectInfo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.sonarsource.com/msbuild/integration/2015/1">
+  <ProjectName>BatchProcessing</ProjectName>
+  <ProjectLanguage>C#</ProjectLanguage>
+  <ProjectType>Product</ProjectType>
+  <ProjectGuid>4007b778-e4ac-4fa7-8b0b-70ed777a30d4</ProjectGuid>
+  <FullPath>C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\BatchProcessing.csproj</FullPath>
+  <IsExcluded>false</IsExcluded>
+  <AnalysisResults>
+    <AnalysisResult Id="FilesToAnalyze" Location="C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\.sonarqube\conf\0\FilesToAnalyze.txt" />
+  </AnalysisResults>
+  <AnalysisSettings>
+    <Property Name="sonar.cs.roslyn.reportFilePaths">C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\bin\Debug\netcoreapp2.1\BatchProcessing.dll.RoslynCA.json|C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\bin\Debug\netcoreapp2.1\BatchProcessing.dll.RoslynCA.json</Property>
+    <Property Name="sonar.cs.analyzer.projectOutPaths">C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\.sonarqube\out\0</Property>
+  </AnalysisSettings>
+  <Configuration>Debug</Configuration>
+  <Platform>AnyCPU</Platform>
+  <TargetFramework>netcoreapp2.1</TargetFramework>
+</ProjectInfo>

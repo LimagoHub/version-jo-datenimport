@@ -1,0 +1,12 @@
+v
+mC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\Job\AbstractJob.csutf-8o
+fC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\Job\IJob.csutf-8x
+oC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\Step\AbstractStep.csutf-8}
+tC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\Step\IdentityProcessor.csutf-8v
+mC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\Step\IProcessor.csutf-8s
+jC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\Step\IReader.csutf-8q
+hC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\Step\IStep.csutf-8s
+jC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\Step\IWriter.csutf-8Å
+xC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\Step\ReaderProcessorWriter.csutf-8≠
+°C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\obj\Debug\netcoreapp2.1\.NETCoreApp,Version=v2.1.AssemblyAttributes.csutf-8û
+íC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\BatchProcessing\obj\Debug\netcoreapp2.1\BatchProcessing.AssemblyInfo.csutf-8

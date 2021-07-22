@@ -1,0 +1,10 @@
+r
+iC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Configurations\ConfigReader.csutf-8Å
+xC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Configurations\Contexts\RicisConfigContext.csutf-8x
+oC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Configurations\Entities\TblConfig.csutf-8Ä
+wC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Configurations\Entities\TblConfigInstance.csutf-8y
+pC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Configurations\IRicisConfiguration.csutf-8x
+oC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Configurations\RicisConfiguration.csutf-8Å
+xC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Configurations\RicisConfigurationException.csutf-8¨
+†C:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Configurations\obj\Debug\netcoreapp2.1\.NETCoreApp,Version=v2.1.AssemblyAttributes.csutf-8ú
+êC:\Users\JoachimWagner\Documents\Projekte\Bundesbank\SpielWiese\DataImport\Configurations\obj\Debug\netcoreapp2.1\Configurations.AssemblyInfo.csutf-8
