@@ -33,13 +33,13 @@ namespace BBk.Rc1.Ricis.DataImport.RepoLendImport.Job
                 ImportFileInfos = importFileInfos
             };
             job.AddStep(RepoLendImportFromCsvFileToArchivedFileStep
-                .GetInstance(useCaseRepoLend, betrachtungstag, fileName));
+                .GetInstance(job.GetAlerts(),useCaseRepoLend, betrachtungstag, fileName));
             job.AddStep(RepoLendImportFromArchivedFileToJsonDtosStep
-                .GetInstance(useCaseRepoLend, betrachtungstag));
+                .GetInstance(job.GetAlerts(),useCaseRepoLend, betrachtungstag));
             job.AddStep(RepoLendImportFromJsonDtosToJsonEntitiesProcessingStep
-                .GetInstance(useCaseRepoLend, betrachtungstag));
+                .GetInstance(job.JobParameters));
             job.AddStep(RepoLendImportFromJsonEntitiesToRicisDatabaseStep
-                .GetInstance(useCaseRepoLend, betrachtungstag));
+                .GetInstance(job.JobParameters));
             return job;
         }
     }

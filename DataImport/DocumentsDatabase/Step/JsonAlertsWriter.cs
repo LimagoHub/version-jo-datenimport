@@ -14,8 +14,11 @@ namespace BBk.Rc1.Ricis.DataImport.DocumentsDatabase.Step
     {
         private readonly JsonFinder finder;
 
-        public JsonAlertsWriter(string useCase, DateTime betrachtungstag)
+        public JsonAlertsWriter(Dictionary<string, object> jobParameters)
         {
+            var dataImportAlerts = (IList<DataImportAlert>)jobParameters["alerts"];
+            var useCase = (string)jobParameters["useCaseRepoLend"];
+            var betrachtungstag = (DateTime)jobParameters["betrachtungstag"];
             finder = new JsonFinder(useCase, betrachtungstag);
         }
 

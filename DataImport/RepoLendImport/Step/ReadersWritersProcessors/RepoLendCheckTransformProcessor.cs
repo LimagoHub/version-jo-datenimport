@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using BBk.Rc1.Ricis.Configurations;
 using BBk.Rc1.Ricis.Database.Entities;
+using BBk.Rc1.Ricis.DataImport.Alerts;
 using BBk.Rc1.Ricis.DataImport.Dtos;
 using BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.AbstractServices;
 using BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.Step;
@@ -28,8 +29,11 @@ namespace BBk.Rc1.Ricis.DataImport.RepoLendImport.Step
         {
         }
 
-        public static RepoLendCheckTransformProcessor GetInstance(DateTime betrachtungstag)
+        public static RepoLendCheckTransformProcessor GetInstance(Dictionary<string, object> jobParameters)
         {
+            var dataImportAlerts = (IList<DataImportAlert>)jobParameters["alerts"];
+            
+            var betrachtungstag = (DateTime)jobParameters["betrachtungstag"];
             var retval = new RepoLendCheckTransformProcessor();
             IInterestCalculationService interestCalculationService
                 = new InterestCalculationServiceDummy();
@@ -41,9 +45,9 @@ namespace BBk.Rc1.Ricis.DataImport.RepoLendImport.Step
             IList<IBusinessRulesCheckService<IList<RepoLendDto>>> preCheckServices
                 = new List<IBusinessRulesCheckService<IList<RepoLendDto>>>
                 {
-                    new RepoLendFieldCheckService(retval.alerts, betrachtungstag),
-                    new RepoLendMultiFieldCheckService(retval.alerts, interestCalculationService),
-                    new RepoLendMultiRecordCheckService(retval.alerts)
+                    new RepoLendFieldCheckService(dataImportAlerts, betrachtungstag),
+                    new RepoLendMultiFieldCheckService(dataImportAlerts, interestCalculationService),
+                    new RepoLendMultiRecordCheckService(dataImportAlerts)
                 };
 
             ITransformService<IList<RepoLendDto>, IList<Tuple<TblRepoLend, TblInstrument>>> transformService
@@ -52,7 +56,7 @@ namespace BBk.Rc1.Ricis.DataImport.RepoLendImport.Step
             IList<IBusinessRulesCheckService<IList<Tuple<TblRepoLend, TblInstrument>>>> postCheckServices
                 = new List<IBusinessRulesCheckService<IList<Tuple<TblRepoLend, TblInstrument>>>>
                 {
-                    new RepoLendConsistencyWithDatabaseCheckService(retval.alerts, repoLendConsistencyQueries)
+                    new RepoLendConsistencyWithDatabaseCheckService(dataImportAlerts, repoLendConsistencyQueries)
                 };
 
             retval.preCheckServices = preCheckServices;

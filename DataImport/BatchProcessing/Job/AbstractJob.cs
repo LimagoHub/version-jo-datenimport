@@ -8,6 +8,18 @@ namespace BBk.Rc1.Ricis.SharedLibraries.BatchProcessing.Job
     {
         protected readonly List<IStep> _steps = new List<IStep>();
 
+        public Dictionary<string, object> JobParameters { get; set; }
+
+        public AbstractJob()
+        {
+            JobParameters = new Dictionary<string, object>();
+        }
+        public AbstractJob(Dictionary<string, object> jobParameters)
+        {
+            JobParameters = jobParameters;
+        }
+
+
         public void AddStep(IStep step)
         {
             _steps.Add(step);

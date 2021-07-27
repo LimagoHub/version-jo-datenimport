@@ -15,21 +15,24 @@ namespace BBk.Rc1.Ricis.DataImport.RepoLendImport.Step
     public class RepoLendImportFromJsonDtosToJsonEntitiesProcessingStep
         : DataImportStep<IList<RepoLendDto>, IList<Tuple<TblRepoLend, TblInstrument>>>
     {
-        private RepoLendImportFromJsonDtosToJsonEntitiesProcessingStep(string useCaseRepoLend, DateTime betrachtungstag)
-            : base(useCaseRepoLend, betrachtungstag)
+        private RepoLendImportFromJsonDtosToJsonEntitiesProcessingStep(IList<DataImportAlert> dataImportAlerts, string useCaseRepoLend, DateTime betrachtungstag)
+            : base(dataImportAlerts, useCaseRepoLend, betrachtungstag)
         {
         }
 
-        public static RepoLendImportFromJsonDtosToJsonEntitiesProcessingStep GetInstance(string useCaseRepoLend,
-            DateTime betrachtungstag)
+        public static RepoLendImportFromJsonDtosToJsonEntitiesProcessingStep GetInstance(Dictionary<string, object> jobParameters)
         {
+            var dataImportAlerts = (IList<DataImportAlert>) jobParameters["alerts"];
+            var useCaseRepoLend = (string)jobParameters["useCaseRepoLend"];
+            var betrachtungstag = (DateTime)jobParameters["betrachtungstag"];
             var step
-                = new RepoLendImportFromJsonDtosToJsonEntitiesProcessingStep(useCaseRepoLend, betrachtungstag);
-            step.InitReader(new JsonDtosReader<RepoLendDto>(useCaseRepoLend, betrachtungstag))
-                .InitProcessor(RepoLendCheckTransformProcessor.GetInstance(betrachtungstag))
-                .InitAlertsWriter(new JsonAlertsWriter<DataImportAlert>(useCaseRepoLend, betrachtungstag))
+                = new RepoLendImportFromJsonDtosToJsonEntitiesProcessingStep(dataImportAlerts,useCaseRepoLend, betrachtungstag);
+            
+            step.InitReader(new JsonDtosReader<RepoLendDto>(jobParameters))
+                .InitProcessor(RepoLendCheckTransformProcessor.GetInstance(jobParameters))
+                .InitAlertsWriter(new JsonAlertsWriter<DataImportAlert>(jobParameters))
                 .InitWriter(
-                    new JsonEntitiesWriter<Tuple<TblRepoLend, TblInstrument>>(useCaseRepoLend, betrachtungstag));
+                    new JsonEntitiesWriter<Tuple<TblRepoLend, TblInstrument>>(jobParameters));
             return step;
         }
     }

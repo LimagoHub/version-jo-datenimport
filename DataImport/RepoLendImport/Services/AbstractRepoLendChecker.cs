@@ -13,6 +13,8 @@ namespace BBk.Rc1.Ricis.DataImport.RepoLendImport.Services
         {
             AlertList = alertList;
         }
+        
+       
 
         protected IList<DataImportAlert> AlertList { get; }
         protected RepoLendDto Item { get; set; }

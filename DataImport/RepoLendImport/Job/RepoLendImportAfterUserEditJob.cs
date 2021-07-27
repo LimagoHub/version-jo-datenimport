@@ -13,10 +13,14 @@ namespace BBk.Rc1.Ricis.DataImport.RepoLendImport.Job
         public static RepoLendImportAfterUserEditJob GetInstance(string useCaseRepoLend, DateTime betrachtungstag)
         {
             var job = new RepoLendImportAfterUserEditJob();
+            job.JobParameters["betrachtungstag"] = betrachtungstag;
+            job.JobParameters["useCaseRepoLend"] = useCaseRepoLend;
+            
+            
             job.AddStep(RepoLendImportFromJsonDtosToJsonEntitiesProcessingStep
-                .GetInstance(useCaseRepoLend, betrachtungstag));
+                .GetInstance(job.JobParameters));
             job.AddStep(RepoLendImportFromJsonEntitiesToRicisDatabaseStep
-                .GetInstance(useCaseRepoLend, betrachtungstag));
+                .GetInstance(job.JobParameters));
             return job;
         }
     }

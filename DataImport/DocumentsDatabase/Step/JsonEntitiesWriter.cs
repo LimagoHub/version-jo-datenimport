@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using BBk.Rc1.Ricis.DataImport.Alerts;
 using BBk.Rc1.Ricis.DataImport.DocumentsDatabase.Contexts;
 using BBk.Rc1.Ricis.DataImport.DocumentsDatabase.Entities;
 using BBk.Rc1.Ricis.SharedLibraries.BatchProcessing.Step;
@@ -12,9 +13,12 @@ namespace BBk.Rc1.Ricis.DataImport.DocumentsDatabase.Step
     {
         private readonly JsonFinder finder;
 
-        public JsonEntitiesWriter(string useCase, DateTime betrachtungstag)
+        public JsonEntitiesWriter(Dictionary<string, object> jobParameters)
         {
-            finder = new JsonFinder(useCase, betrachtungstag);
+            var dataImportAlerts = (IList<DataImportAlert>)jobParameters["alerts"];
+            var useCaseRepoLend = (string)jobParameters["useCaseRepoLend"];
+            var betrachtungstag = (DateTime)jobParameters["betrachtungstag"];
+            finder = new JsonFinder(useCaseRepoLend, betrachtungstag);
         }
 
         /// <summary>

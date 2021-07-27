@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using BBk.Rc1.Ricis.DataImport.Alerts;
 using BBk.Rc1.Ricis.DataImport.DocumentsDatabase.Step;
 using BBk.Rc1.Ricis.DataImport.Dtos;
 using BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.Step;
@@ -14,16 +15,16 @@ namespace BBk.Rc1.Ricis.DataImport.RepoLendImport.Step
     public class RepoLendImportFromArchivedFileToJsonDtosStep
         : DataImportStep<IList<RepoLendDto>, IList<RepoLendDto>>
     {
-        private RepoLendImportFromArchivedFileToJsonDtosStep(string useCaseRepoLend, DateTime betrachtungstag)
-            : base(useCaseRepoLend, betrachtungstag)
+        private RepoLendImportFromArchivedFileToJsonDtosStep(IList<DataImportAlert> dataImportAlerts, string useCaseRepoLend, DateTime betrachtungstag)
+            : base(dataImportAlerts,useCaseRepoLend, betrachtungstag)
         {
         }
 
-        public static RepoLendImportFromArchivedFileToJsonDtosStep GetInstance(string useCaseRepoLend,
+        public static RepoLendImportFromArchivedFileToJsonDtosStep GetInstance(IList<DataImportAlert> dataImportAlerts, string useCaseRepoLend,
             DateTime betrachtungstag)
         {
             var step
-                = new RepoLendImportFromArchivedFileToJsonDtosStep(useCaseRepoLend, betrachtungstag);
+                = new RepoLendImportFromArchivedFileToJsonDtosStep(dataImportAlerts, useCaseRepoLend, betrachtungstag);
             //Verschachtelung der Inhalte des Archived Files in einen RepoLendCsvReader, 
             //der aus dem String eine Liste von Dtos erzeugt
             //FUNKTIONIERT SO NICHT:

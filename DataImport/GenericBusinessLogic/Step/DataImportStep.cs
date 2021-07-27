@@ -6,27 +6,25 @@ using BBk.Rc1.Ricis.SharedLibraries.BatchProcessing.Step;
 
 namespace BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.Step
 {
-    public class DataImportStep<R, W> : AbstractStep, IAlertGenerator
+    public class DataImportStep<R, W> : AbstractStep
     {
         protected IList<DataImportAlert> alerts;
 
-        public DataImportStep(string useCase, DateTime betrachtungstag)
+        public DataImportStep(IList<DataImportAlert> dataImportAlerts, string useCase, DateTime betrachtungstag)
         {
             UseCase = useCase;
             Betrachtungstag = betrachtungstag;
+            alerts = dataImportAlerts;
         }
 
         private string UseCase { get; }
         private DateTime Betrachtungstag { get; }
         private IReader<R> Reader { get; set; }
-        private IDataImportProcessor<R, W> Processor { get; set; }
+        private IProcessor<R, W> Processor { get; set; }
         private IWriter<IList<DataImportAlert>> AlertsWriter { get; set; }
         private IWriter<W> Writer { get; set; }
 
-        public IList<DataImportAlert> GetAlerts()
-        {
-            return alerts ?? new List<DataImportAlert>();
-        }
+        
 
         public DataImportStep<R, W> InitReader(IReader<R> reader)
         {
@@ -34,7 +32,7 @@ namespace BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.Step
             return this;
         }
 
-        public DataImportStep<R, W> InitProcessor(IDataImportProcessor<R, W> processor)
+        public DataImportStep<R, W> InitProcessor(IProcessor<R, W> processor)
         {
             Processor = processor;
             return this;
@@ -54,15 +52,17 @@ namespace BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.Step
 
         public override void Execute()
         {
+           
             var processResult = Processor.Process(Reader.Read());
-            alerts = Processor.GetAlerts();
+   
+            AlertsWriter?.Write(alerts);
             if (processResult == null)
             {
-                AlertsWriter?.Write(alerts);
+                
                 throw new DataImportException("Fachliche Fehler beim Datenimport.");
             }
 
-            AlertsWriter?.Write(alerts);
+            
             Writer.Write(processResult);
         }
     }

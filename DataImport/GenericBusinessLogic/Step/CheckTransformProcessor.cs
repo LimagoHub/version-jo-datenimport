@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using BBk.Rc1.Ricis.DataImport.Alerts;
 using BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.AbstractServices;
+using BBk.Rc1.Ricis.SharedLibraries.BatchProcessing.Step;
 
 
 namespace BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.Step
@@ -16,9 +17,9 @@ namespace BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.Step
     ///     Z. B. Liste von Entities,
     ///     die später in die Datenbank gespeichert werden sollen
     /// </typeparam>
-    public class CheckTransformProcessor<P, R> : IDataImportProcessor<P, R>
+    public class CheckTransformProcessor<P, R> : IProcessor<P, R>
     {
-        protected readonly List<DataImportAlert> alerts = new List<DataImportAlert>();
+        
 
         public CheckTransformProcessor(
             IList<IBusinessRulesCheckService<P>> preCheckServices,
@@ -41,10 +42,7 @@ namespace BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.Step
         protected IList<IBusinessRulesCheckService<R>> postCheckServices { get; set; }
 
 
-        public IList<DataImportAlert> GetAlerts()
-        {
-            return alerts;
-        }
+      
 
         public R Process(P p)
         {
@@ -60,5 +58,7 @@ namespace BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.Step
                 return default;
             }
         }
+
+       
     }
 }

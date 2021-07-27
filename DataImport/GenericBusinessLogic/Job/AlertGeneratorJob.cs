@@ -5,11 +5,16 @@ using BBk.Rc1.Ricis.SharedLibraries.BatchProcessing.Job;
 
 namespace BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.Job
 {
-    public class AlertGeneratorJob : AbstractJob, IAlertGenerator
+    public class AlertGeneratorJob : AbstractJob
     {
         private readonly List<DataImportAlert> alerts = new List<DataImportAlert>();
 
-        public IList<DataImportAlert> GetAlerts()
+        public AlertGeneratorJob()
+        {
+            JobParameters["alerts"] = alerts;
+        }
+
+        public List<DataImportAlert> GetAlerts()
         {
             return alerts;
         }
@@ -21,16 +26,13 @@ namespace BBk.Rc1.Ricis.DataImport.GenericBusinessLogic.Job
                 {
                     step.Init();
                     step.Execute();
+                    step.Dispose();
                 }
                 catch (DataImportException e)
                 {
                     throw new DataImportException($"Durchgereicht von {step.GetType().Name}: " + e.Message);
                 }
-                finally
-                {
-                    if (step is IAlertGenerator generator) alerts.AddRange(generator.GetAlerts());
-                    step.Dispose();
-                }
+               
         }
     }
 }
